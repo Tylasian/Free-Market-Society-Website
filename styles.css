@@ -9,18 +9,17 @@ main {
     display: grid;
 
     grid-template-areas:
-    "topbar"
-    "content"
-    "footer";
-
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 5vh;
+    "sidebar" "content";
+    grid-template-columns: .5fr 2fr;
+    grid-template-rows: 100%;
+    grid-column-gap: 15px;
+    grid-row-end: span 5;
     
+
 }
 
 header {
-    grid-area: topbar;
+    grid-area: sidebar;
     color:white;
     background-color: grey;
 }
@@ -28,27 +27,25 @@ header {
 .headerContainer{
     display: flex;
     background-color: grey;
-    width: 100% ;
-    height: 100%;
+    width: 100%;
+    height:100%;
+    border-radius: 0 30px 30px 0;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-content: center;
     
 }
 
 .headerButtons {
     background-color: yellow;
-    width: 20vh;
-    height: 10vh;
+    width: 50%;
+    height: 5vh;
+    margin: 10px;
     text-align: center;
     border-radius: 10px;
 }
 
 article {
     grid-area: content;
-    color:white;
-}
-
-footer {
-    grid-area: footer;
     color:white;
 }
