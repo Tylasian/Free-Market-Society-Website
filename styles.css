@@ -51,22 +51,22 @@
 }
 
 .cards{
-    display:grid;
-    width: 100%;
-    gap: 1em;
-    margin: 10px;
-    grid-auto-flow: row;
-    text-align: center;
+    display:flex;
+    gap: 10px;
+    margin-top: 1%;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .cardDesign{
     background-color: grey;
+    width: 25em;
+    height: 30em;
+    padding:1%;
     border-radius: 10px;
-    width: 10rem ;
-    height: 10rem ;
+    font-size:50%;
+    word-break: break-all;
+    word-wrap: break-word;
+    text-align: center;
 }
 
-@media (min-width:45em){
-    .cards{
-        grid-auto-flow: column;
-    }
-}
+
